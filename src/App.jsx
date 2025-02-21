@@ -1,14 +1,42 @@
-import { useState } from 'react'
-import './App.css'
+import Header from "./Header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Hello React 19</h1>
-    </>
-  )
+    <div>
+      <Header />
+      <p>Hello React</p>
+      <Fruit />
+
+      {/* We can Import component like this as well */}
+      <Color></Color>  
+    </div>
+  );
 }
 
-export default App
+function Fruit() {
+  return (
+    <div>
+      <h2>Fruits</h2>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+      </ul>
+    </div>
+  );
+}
+
+function Color() {
+  return (
+    <div>
+      <h2>Colors</h2>
+      <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ul>
+    </div>
+  );
+}
+
+export default App;
