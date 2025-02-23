@@ -91,7 +91,7 @@ function App() {
         <br/>
         <br/>
         <br/>
-        <img src={path} alt="Image" width="300px" height="250px" />
+        {/* <img src={path} alt="Image" width="300px" height="250px" /> */}
         
 
 
