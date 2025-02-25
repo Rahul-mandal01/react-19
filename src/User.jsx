@@ -1,6 +1,11 @@
-function User(){
+function User({user}){
     return(
-        <h2>Rahul Kumar</h2>
+       <>
+       <hr/>
+        <h2>Name: {user.name}</h2>
+        <h2>Age: {user.age}</h2>
+        <h2>Email: {user.email}</h2>
+       </>
     )
 }
 
