@@ -1,43 +1,41 @@
 import { useState } from "react";
 import User from "./User";
-import College from "./College";
-import Student from "./Student";
+import Wrapper from './Wrapper';
+
 function App() {
-  // let userName = "Rahul";
-  // let age=23;
-  // let email="rahul@test.com"
-
-  let userObject1={
-    name:"Rahul",
-    age:23,
-    email:"rahul@test.com"
-  }
-
-  let userObject2={
-    name:"Anil",
-    age:25,
-    email:"anil@test.com"
-  }
-
-  let userObject3={
-    name:"Steve",
-    age:30,
-    email:"steve@test.com"
-  }
-
-  let collegeNames = ['IIT', 'NIT', 'NSEC', 'IIEST', 'JU']
-  const[student, setStudent] = useState()
     return(
       <>
-       <h1>Props in React js</h1>
-       {student && <Student name={student}/>}
-       <button onClick={()=>setStudent("Rahul")}>Update Student Name</button>
-       <College names={collegeNames[2]}/>
-       {/* <User name="Rahul" age="22" email="test@gmail.com"/> */}
-        {/* <User name={userName} age={age} email={email} /> */}
-       <User user={userObject1}/>
-       <User user={userObject2}/>
-       <User user={userObject3}/>
+       <h1>Jsx with Props in React js</h1>
+       <Wrapper color="orange">
+        <h1>Hello Everyone</h1>
+       </Wrapper>
+
+       <Wrapper>
+        <h1>Hello Rahul</h1>
+       </Wrapper>
+
+       <Wrapper>
+        <h1>Hello Love</h1>
+        <h2 style={{color:'red'}}>Please Login</h2>
+       </Wrapper>
+
+       <Wrapper>
+        <h1>Hello Anil</h1>
+       </Wrapper>
+
+       
+
+       {/* DEFAULT PROPS CODE */}
+       {/* <User name="Rahul"/>
+       <User name="Love"/>
+       <User name="Anil"/>
+       <User name="Sam"/>
+       <User />
+       <User name="Robert"/>
+       <User /> */}
+
+        
+
       </>
     )
 
