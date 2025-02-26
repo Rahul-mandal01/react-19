@@ -1,44 +1,51 @@
 import { useState } from "react";
-import User from "./User";
-import Wrapper from './Wrapper';
+
+function clear(event) {
+  console.log(event.target.value);
+}
 
 function App() {
-    return(
-      <>
-       <h1>Jsx with Props in React js</h1>
-       <Wrapper color="orange">
-        <h1>Hello Everyone</h1>
-       </Wrapper>
+  const [user, setUser] = useState("");
+  const [place, setPlace] = useState("");
+  const [age, setAge] = useState("");
 
-       <Wrapper>
-        <h1>Hello Rahul</h1>
-       </Wrapper>
+  return (
+    <>
+      <h1>Get Input Field Value</h1>
 
-       <Wrapper>
-        <h1>Hello Love</h1>
-        <h2 style={{color:'red'}}>Please Login</h2>
-       </Wrapper>
+      <input
+        type="text"
+        value={user}
+        onChange={(event) => setUser(event.target.value)}
+        placeholder="Enter User Name"
+        onBlur={clear} // Call clear when input loses focus
+      />
+      <h1>{user}</h1>
+      <button onClick={() => setUser("")}>Clear Value</button>
+      <hr />
 
-       <Wrapper>
-        <h1>Hello Anil</h1>
-       </Wrapper>
+      <input
+        type="text"
+        value={place}
+        onChange={(event) => setPlace(event.target.value)}
+        placeholder="Enter User Place"
+        onBlur={clear}
+      />
+      <h1>{place}</h1>
+      <button onClick={() => setPlace("")}>Clear Value</button>
+      <hr />
 
-       
-
-       {/* DEFAULT PROPS CODE */}
-       {/* <User name="Rahul"/>
-       <User name="Love"/>
-       <User name="Anil"/>
-       <User name="Sam"/>
-       <User />
-       <User name="Robert"/>
-       <User /> */}
-
-        
-
-      </>
-    )
-
+      <input
+        type="number"
+        value={age}
+        onChange={(event) => setAge(event.target.value)}
+        placeholder="Enter User Age"
+        onBlur={clear}
+      />
+      <h1>{age}</h1>
+      <button onClick={() => setAge("")}>Clear Value</button>
+    </>
+  );
 }
 
 export default App;
