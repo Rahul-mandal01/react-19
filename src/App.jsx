@@ -5,9 +5,6 @@ function clear(event) {
 }
 
 function App() {
-  const [user, setUser] = useState("");
-  const [place, setPlace] = useState("");
-  const [age, setAge] = useState("");
 
   return (
     <>
