@@ -1,7 +1,8 @@
-import Skills from './Skills'
+
 function App() {
   return (
     <>
+
     </>
   );
 }
