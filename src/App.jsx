@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      <h1>Header Call</h1>
+      <h1></h1>
     </>
   );
 }
