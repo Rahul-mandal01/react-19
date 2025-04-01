@@ -26,6 +26,12 @@ function App() {
       age: 35,
       city: 'bangalore',
       id: 4
+    },
+    {
+      name : 'rohit',
+      age: 38,
+      city: 'kolkata',
+      id: 5
     }
 
   ]
