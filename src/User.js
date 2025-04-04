@@ -83,22 +83,7 @@
     name: "Aman Thakur",
     designation: "AI Engineer",
     image: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    name: "Ishita Sen",
-    designation: "Business Analyst",
-    image: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    name: "Mohit Bansal",
-    designation: "Network Administrator",
-    image: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    name: "Trisha Mukherjee",
-    designation: "Software Architect",
-    image: "https://www.w3schools.com/howto/img_avatar.png",
-  },
+  }
 ];
 
 export default User;
