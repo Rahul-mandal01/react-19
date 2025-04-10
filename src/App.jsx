@@ -41,7 +41,7 @@ function App() {
       <hr/>
 
       <form onSubmit={handleSubmitRef} method="post" action="">
-        <h1>Controlled Component with useRef</h1>
+        <h1>Uncontrolled Component with useRef</h1>
         <input type="text" ref={userRef} id="userRef" placeholder="Enter user name"  />
         <br/> <br/>
         <input type="password" ref={passwordRef} id="passwordRef" placeholder="Enter user password"  />
