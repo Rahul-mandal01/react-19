@@ -2,29 +2,55 @@ import { useRef } from "react";
 
 function App() {
 
-  const inputRef = useRef(null);
-  const inputHandler = () => {
-    console.log(inputRef);
-    inputRef.current.focus();
-    inputRef.current.style.color = 'red'
-    inputRef.current.placeholder = 'Hello World'
-    inputRef.current.value = 'Hello world'
-    console.log(inputRef.current.value);
+  const userRef = useRef();
+  const passwordRef = useRef();
+
+  const handleForm = (event) => {
+    event.preventDefault();
+
+    const user = document.querySelector("#user").value;
+    const password = document.querySelector("#password").value;
+
+    console.log(user, password); 
   }
 
-  const toggleHandler = () => {
-    if( inputRef.current.style.display != 'none'){
-      inputRef.current.style.display = 'none'
-    }else{
-      inputRef.current.style.display = 'inline'
-    }
+  const handleSubmitRef = (event) => {
+    event.preventDefault();
+
+    const user = userRef.current.value;
+    const password = passwordRef.current.value;
+
+    console.log(user, password);
+    
   }
+
   return (
     <>
-      <h1>useRef</h1>
-      <button onClick={toggleHandler} >Toggle</button>
-      <input ref={inputRef} type="text" placeholder="Enter user name" />
-      <button onClick={inputHandler} >Focus on Input Field</button>
+      <h1>Uncontrolled Component</h1>
+      <form action="" method="post" onSubmit={handleForm} >
+        <input type="text" id="user" placeholder="Enter user name" />
+        <br /> <br/>
+        <input type="password" id="password" placeholder="Enter user password" />
+        <br/> <br/>
+
+        <button>
+          Submit
+        </button>
+      </form>
+
+      <hr/>
+
+      <form onSubmit={handleSubmitRef} method="post" action="">
+        <h1>Controlled Component with useRef</h1>
+        <input type="text" ref={userRef} id="userRef" placeholder="Enter user name"  />
+        <br/> <br/>
+        <input type="password" ref={passwordRef} id="passwordRef" placeholder="Enter user password"  />
+        <br/> <br/>
+
+        <button>
+          Submit with Ref
+        </button>
+      </form>
     </>
   );
 }
