@@ -21,7 +21,7 @@ function App() {
         <h2>Loaded</h2>
       )}
       <button disabled={pending} onClick={handleButton}>
-        Please Click me once then see the magic
+        Please Click me once then see the magic wow........
       </button>
     </>
   );
