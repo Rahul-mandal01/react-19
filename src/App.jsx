@@ -21,7 +21,7 @@ function App() {
         <h2>Loaded</h2>
       )}
       <button disabled={pending} onClick={handleButton}>
-        Click me
+        Click
       </button>
     </>
   );
