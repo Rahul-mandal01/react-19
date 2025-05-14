@@ -18,7 +18,7 @@ function App() {
           style={{width: "300px"}}
         />
       ) : (
-        <h2>Loaded buttos</h2>
+        <h2>Loaded buttons</h2>
       )}
       <button disabled={pending} onClick={handleButton}>
         Clicked me 
