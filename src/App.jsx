@@ -21,7 +21,7 @@ function App() {
         <h2>Loaded buttons</h2>
       )}
       <button disabled={pending} onClick={handleButton}>
-        Clicked me 
+        Clicked
       </button>
     </>
   );
